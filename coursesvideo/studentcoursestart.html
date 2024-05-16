@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Courses Start</title>
+    <link rel="stylesheet" href="../css/studentcoursestart.css">
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"/>
+
+    <link rel="stylesheet" 
+    href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
+    integrity="sha384- 
+     B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" 
+      crossorigin="anonymous"> 
+</head>
+<body>
+  <header class="navbar">
+    <a href="../studenthome.html"><img class="logo-fpt" src="../img/logo fpt.jpg" alt="fpt education logo" /></a>
+
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link" href="../studentsubject.html">Courses</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../blog/blog.html">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../studentprofile.html">Profile</a>
+      </li>
+      <li class="nav-item">
+        <div class="dropdown">
+          <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user fa-lg" style="color: rgb(255, 254, 254);"></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Name: StuName</a>
+            <a class="dropdown-item" href="#">ID: StuID</a>
+            <a class="dropdown-item" href="#">Class: StuClass</a>
+            <a class="dropdown-item" href="../setting/settingstudent.html">Settings <i class="fas fa-cog"></i></a>
+            <a class="dropdown-item" href="../login.html">Log Out <i class="fas fa-sign-out-alt"></i></a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </header>
+
+      <div class="container">
+
+        <div class="stepper-wrapper">
+          <div class="stepper-item completed">
+            <div class="step-counter">1</div>
+          </div>
+          <div class="stepper-item completed">
+            <div class="step-counter">2</div>
+          </div>
+          <div class="stepper-item active">
+            <div class="step-counter">3</div>
+          </div>
+          <div class="stepper-item">
+            <div class="step-counter">4</div>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-8">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/AIOC62C1qDg" title="YouTube video" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-4">
+                <h2>VideoName</h2><br>
+                <span>VideoDes: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Nulla facilisi morbi tempus iaculis urna id volutpat. Viverra tellus in hac habitasse platea dictumst vestibulum. 
+                    Eget aliquet nibh praesent tristique magna sit amet purus. Facilisi etiam dignissim diam quis enim</span>
+
+                    <div class="button">
+                        <button type="button" class="btn btn-outline-warning">Previous Video</button>
+                        <button type="button" class="btn btn-warning start-button" onclick="window.location.href='../Coursesvideo/studentcoursefinish.html'">Continue</button>
+                      </div>
+            </div>
+          </div>
+      </div>
+
+      <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+// Chọn nút "Continue"
+var continueButton = document.querySelector('.start-button');
+
+// Lấy thanh stepper
+var stepper = document.querySelector('.stepper-wrapper');
+
+// Nếu nút "Continue" được nhấn
+continueButton.addEventListener('click', function() {
+    // Tìm bước tiếp theo chưa hoàn thành
+    var nextStep = stepper.querySelector('.stepper-item:not(.completed)');
+    
+    // Nếu có bước tiếp theo
+    if (nextStep) {
+        // Thêm class "completed" cho bước hiện tại
+        nextStep.classList.add('completed');
+        // Bỏ class "active" khỏi bước hiện tại
+        nextStep.previousElementSibling.classList.remove('active');
+        // Thêm class "active" cho bước tiếp theo
+        nextStep.classList.add('active');
+    }
+});
+
+    </script>
+</body>
+</html>

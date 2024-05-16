@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="../css/blog.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384- 
+     B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <a href="../studenthome.html"
+        ><img class="logo-fpt" src="../img/logo fpt.jpg" alt="fpt education logo"
+      /></a>
+
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link" href="../studentsubject.html">Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../blog/blog.html">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../studentprofile.html">Profile</a>
+        </li>
+        <li class="nav-item">
+          <div class="dropdown">
+            <a
+              class="dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i
+                class="fas fa-user fa-lg"
+                style="color: rgb(255, 254, 254)"
+              ></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Name: StuName</a>
+              <a class="dropdown-item" href="#">ID: StuID</a>
+              <a class="dropdown-item" href="#">Class: StuClass</a>
+              <a class="dropdown-item" href="../setting/settingstudent.html"
+                >Settings <i class="fas fa-cog"></i
+              ></a>
+              <a class="dropdown-item" href="../login.html"
+                >Log Out <i class="fas fa-sign-out-alt"></i
+              ></a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </header>
+
+    <div class="banner">
+      <div class="text">
+        <h4>Welcome to</h4>
+        <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',sans-serif;">
+          BlogZone.
+        </h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="search-header">
+        <form class="d-flex" id="searchForm">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            id="searchInput"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>      
+
+      <div class="box1">
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 25rem">
+              <img
+                src="../img/e-learning-website-01-scaled.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Blog’s title will goes here in bold and be set at size 18
+                </h5>
+                <p class="card-text">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum...”
+                </p>
+
+                <div class="row">
+                  <div class="col-sm-5 col-md-6">
+                    <a href="../blog/blogname.html" class="btn btn-primary"
+                      >Read more</a
+                    >
+                  </div>
+                  <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                    <div class="icon">
+                      <i id="heartIcon" class="far fa-heart heart-icon"></i>
+                    <!-- Button to trigger modal -->
+                    <i class="fas fa-share-alt"onclick="openShareModal()"></i>
+                    <!-- The modal -->
+                    <div id="shareModal" class="modal">
+                      <div class="modal-content">
+                        <span class="close" onclick="closeShareModal()"
+                          >&times;</span
+                        >
+                        <!-- Share options -->
+                        <div class="form-share">
+                          <div>
+                            <h3 style="text-align: center; color: orange;">Share this blog</h3>
+                            <p style="text-align: center; margin: 35px 0 35px 0;">If you love this blog, share it with your friend.
+                              They will thank you later. ^-^</p>
+                          </div>  
+                          <div class="fb-gg-gt">
+                            <div class="facebook">
+                              <button onclick="share('facebook')" type="button" class="btn btn-primary"><i class="fab fa-facebook"></i> Facebook</button>
+                            </div>
+                            <div class="google">
+                              <button onclick="share('google')" type="button" style="color: #ffffff;" class="btn btn-info"><i class="fab fa-google" style="color: #ffffff;"></i> Google</button>
+                            </div>
+                            <div class="github">
+                              <button onclick="share('github')" type="button" class="btn btn-dark"><i class="fab fa-github"></i> Github</button>
+                            </div>
+                          </div>
+                          <h5 style="color: black; text-align: center; margin-top: 35px;">4,5K Share</h5>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box2"></div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 25rem">
+              <img
+                src="../img/5-xu-huong-e-learning-dinh-hinh-nam-2021-1.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Blog’s title will goes here in bold and be set at size 18
+                </h5>
+                <p class="card-text">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum...”
+                </p>
+
+                <div class="row">
+                  <div class="col-sm-5 col-md-6">
+                    <a href="../blog/blogname.html" class="btn btn-primary"
+                      >Read more</a
+                    >
+                  </div>
+                  <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                    <div class="icon">
+                      <i id="heartIcon" class="far fa-heart heart-icon"></i>
+                    <!-- Button to trigger modal -->
+                    <i class="fas fa-share-alt"onclick="openShareModal()"></i>
+                    <!-- The modal -->
+                    <div id="shareModal" class="modal">
+                      <div class="modal-content">
+                        <span class="close" onclick="closeShareModal()"
+                          >&times;</span
+                        >
+                        <!-- Share options -->
+                        <div class="form-share">
+                          <div>
+                            <h3 style="text-align: center; color: orange;">Share this blog</h3>
+                            <p style="text-align: center; margin: 35px 0 35px 0;">If you love this blog, share it with your friend.
+                              They will thank you later. ^-^</p>
+                          </div>  
+                          <div class="fb-gg-gt">
+                            <div class="facebook">
+                              <button onclick="share('facebook')" type="button" class="btn btn-primary"><i class="fab fa-facebook"></i> Facebook</button>
+                            </div>
+                            <div class="google">
+                              <button onclick="share('google')" type="button" style="color: #ffffff;" class="btn btn-info"><i class="fab fa-google" style="color: #ffffff;"></i> Google</button>
+                            </div>
+                            <div class="github">
+                              <button onclick="share('github')" type="button" class="btn btn-dark"><i class="fab fa-github"></i> Github</button>
+                            </div>
+                          </div>
+                          <h5 style="color: black; text-align: center; margin-top: 35px;">4,5K Share</h5>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box2"></div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 25rem">
+              <img
+                src="../img/dai-hoc-fpt-1-1659081213-910x607.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Blog’s title will goes here in bold and be set at size 18
+                </h5>
+                <p class="card-text">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum...”
+                </p>
+
+                <div class="row">
+                  <div class="col-sm-5 col-md-6">
+                    <a href="../blog/blogname.html" class="btn btn-primary"
+                      >Read more</a
+                    >
+                  </div>
+                  <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                    <div class="icon">
+                      <i id="heartIcon" class="far fa-heart heart-icon"></i>
+                    <!-- Button to trigger modal -->
+                    <i class="fas fa-share-alt"onclick="openShareModal()"></i>
+                    <!-- The modal -->
+                    <div id="shareModal" class="modal">
+                      <div class="modal-content">
+                        <span class="close" onclick="closeShareModal()"
+                          >&times;</span
+                        >
+                        <!-- Share options -->
+                        <div class="form-share">
+                          <div>
+                            <h3 style="text-align: center; color: orange;">Share this blog</h3>
+                            <p style="text-align: center; margin: 35px 0 35px 0;">If you love this blog, share it with your friend.
+                              They will thank you later. ^-^</p>
+                          </div>  
+                          <div class="fb-gg-gt">
+                            <div class="facebook">
+                              <button onclick="share('facebook')" type="button" class="btn btn-primary"><i class="fab fa-facebook"></i> Facebook</button>
+                            </div>
+                            <div class="google">
+                              <button onclick="share('google')" type="button" style="color: #ffffff;" class="btn btn-info"><i class="fab fa-google" style="color: #ffffff;"></i> Google</button>
+                            </div>
+                            <div class="github">
+                              <button onclick="share('github')" type="button" class="btn btn-dark"><i class="fab fa-github"></i> Github</button>
+                            </div>
+                          </div>
+                          <h5 style="color: black; text-align: center; margin-top: 35px;">4,5K Share</h5>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box2"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box1">
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 25rem">
+              <img
+                src="../img/Doanh-nghiệp-làm-gì-để-đánh-giá-hiệu-quả-khóa-học-E-learning.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Blog’s title will goes here in bold and be set at size 18
+                </h5>
+                <p class="card-text">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum...”
+                </p>
+
+                <div class="row">
+                  <div class="col-sm-5 col-md-6">
+                    <a href="../blog/blogname.html" class="btn btn-primary"
+                      >Read more</a
+                    >
+                  </div>
+                  <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                    <div class="icon">
+                      <i id="heartIcon" class="far fa-heart heart-icon"></i>
+                    <!-- Button to trigger modal -->
+                    <i class="fas fa-share-alt"onclick="openShareModal()"></i>
+                    <!-- The modal -->
+                    <div id="shareModal" class="modal">
+                      <div class="modal-content">
+                        <span class="close" onclick="closeShareModal()"
+                          >&times;</span
+                        >
+                        <!-- Share options -->
+                        <div class="form-share">
+                          <div>
+                            <h3 style="text-align: center; color: orange;">Share this blog</h3>
+                            <p style="text-align: center; margin: 35px 0 35px 0;">If you love this blog, share it with your friend.
+                              They will thank you later. ^-^</p>
+                          </div>  
+                          <div class="fb-gg-gt">
+                            <div class="facebook">
+                              <button onclick="share('facebook')" type="button" class="btn btn-primary"><i class="fab fa-facebook"></i> Facebook</button>
+                            </div>
+                            <div class="google">
+                              <button onclick="share('google')" type="button" style="color: #ffffff;" class="btn btn-info"><i class="fab fa-google" style="color: #ffffff;"></i> Google</button>
+                            </div>
+                            <div class="github">
+                              <button onclick="share('github')" type="button" class="btn btn-dark"><i class="fab fa-github"></i> Github</button>
+                            </div>
+                          </div>
+                          <h5 style="color: black; text-align: center; margin-top: 35px;">4,5K Share</h5>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box2"></div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 25rem">
+              <img
+                src="../img/hoan-thanh-som-ky-tieng-anh-du-bi-sinh-vien-se-duoc-vao-thang-ky-chuyen-nganh.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Blog’s title will goes here in bold and be set at size 18
+                </h5>
+                <p class="card-text">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum...”
+                </p>
+
+                <div class="row">
+                  <div class="col-sm-5 col-md-6">
+                    <a href="../blog/blogname.html" class="btn btn-primary"
+                      >Read more</a
+                    >
+                  </div>
+                  <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                    <div class="icon">
+                      <i id="heartIcon" class="far fa-heart heart-icon"></i>
+                    <!-- Button to trigger modal -->
+                    <i class="fas fa-share-alt"onclick="openShareModal()"></i>
+                    <!-- The modal -->
+                    <div id="shareModal" class="modal">
+                      <div class="modal-content">
+                        <span class="close" onclick="closeShareModal()"
+                          >&times;</span
+                        >
+                        <!-- Share options -->
+                        <div class="form-share">
+                          <div>
+                            <h3 style="text-align: center; color: orange;">Share this blog</h3>
+                            <p style="text-align: center; margin: 35px 0 35px 0;">If you love this blog, share it with your friend.
+                              They will thank you later. ^-^</p>
+                          </div>  
+                          <div class="fb-gg-gt">
+                            <div class="facebook">
+                              <button onclick="share('facebook')" type="button" class="btn btn-primary"><i class="fab fa-facebook"></i> Facebook</button>
+                            </div>
+                            <div class="google">
+                              <button onclick="share('google')" type="button" style="color: #ffffff;" class="btn btn-info"><i class="fab fa-google" style="color: #ffffff;"></i> Google</button>
+                            </div>
+                            <div class="github">
+                              <button onclick="share('github')" type="button" class="btn btn-dark"><i class="fab fa-github"></i> Github</button>
+                            </div>
+                          </div>
+                          <h5 style="color: black; text-align: center; margin-top: 35px;">4,5K Share</h5>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box2"></div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 25rem">
+              <img
+                src="../img/thumbnailelearning.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Blog’s title will goes here in bold and be set at size 18
+                </h5>
+                <p class="card-text">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum...”
+                </p>
+
+                <div class="row">
+                  <div class="col-sm-5 col-md-6">
+                    <a href="../blog/blogname.html" class="btn btn-primary"
+                      >Read more</a
+                    >
+                  </div>
+                  <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                    <div class="icon">
+                      <i id="heartIcon" class="far fa-heart heart-icon"></i>
+                    <!-- Button to trigger modal -->
+                    <i class="fas fa-share-alt"onclick="openShareModal()"></i>
+                    <!-- The modal -->
+                    <div id="shareModal" class="modal">
+                      <div class="modal-content">
+                        <span class="close" onclick="closeShareModal()"
+                          >&times;</span
+                        >
+                        <!-- Share options -->
+                        <div class="form-share">
+                          <div>
+                            <h3 style="text-align: center; color: orange;">Share this blog</h3>
+                            <p style="text-align: center; margin: 35px 0 35px 0;">If you love this blog, share it with your friend.
+                              They will thank you later. ^-^</p>
+                          </div>  
+                          <div class="fb-gg-gt">
+                            <div class="facebook">
+                              <button onclick="share('facebook')" type="button" class="btn btn-primary"><i class="fab fa-facebook"></i> Facebook</button>
+                            </div>
+                            <div class="google">
+                              <button onclick="share('google')" type="button" style="color: #ffffff;" class="btn btn-info"><i class="fab fa-google" style="color: #ffffff;"></i> Google</button>
+                            </div>
+                            <div class="github">
+                              <button onclick="share('github')" type="button" class="btn btn-dark"><i class="fab fa-github"></i> Github</button>
+                            </div>
+                          </div>
+                          <h5 style="color: black; text-align: center; margin-top: 35px;">4,5K Share</h5>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box2"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box1">
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 25rem">
+              <img
+                src="../img/top4-khoi-nganh-1.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Blog’s title will goes here in bold and be set at size 18
+                </h5>
+                <p class="card-text">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum...”
+                </p>
+
+                <div class="row">
+                  <div class="col-sm-5 col-md-6">
+                    <a href="../blog/blogname.html" class="btn btn-primary"
+                      >Read more</a
+                    >
+                  </div>
+                  <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                    <div class="icon">
+                      <i id="heartIcon" class="far fa-heart heart-icon"></i>
+                    <!-- Button to trigger modal -->
+                    <i class="fas fa-share-alt"onclick="openShareModal()"></i>
+                    <!-- The modal -->
+                    <div id="shareModal" class="modal">
+                      <div class="modal-content">
+                        <span class="close" onclick="closeShareModal()"
+                          >&times;</span
+                        >
+                        <!-- Share options -->
+                        <div class="form-share">
+                          <div>
+                            <h3 style="text-align: center; color: orange;">Share this blog</h3>
+                            <p style="text-align: center; margin: 35px 0 35px 0;">If you love this blog, share it with your friend.
+                              They will thank you later. ^-^</p>
+                          </div>  
+                          <div class="fb-gg-gt">
+                            <div class="facebook">
+                              <button onclick="share('facebook')" type="button" class="btn btn-primary"><i class="fab fa-facebook"></i> Facebook</button>
+                            </div>
+                            <div class="google">
+                              <button onclick="share('google')" type="button" style="color: #ffffff;" class="btn btn-info"><i class="fab fa-google" style="color: #ffffff;"></i> Google</button>
+                            </div>
+                            <div class="github">
+                              <button onclick="share('github')" type="button" class="btn btn-dark"><i class="fab fa-github"></i> Github</button>
+                            </div>
+                          </div>
+                          <h5 style="color: black; text-align: center; margin-top: 35px;">4,5K Share</h5>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box2"></div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 25rem">
+              <img
+                src="../img/e-learning-website-01-scaled.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Blog’s title will goes here in bold and be set at size 18
+                </h5>
+                <p class="card-text">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum...”
+                </p>
+
+                <div class="row">
+                  <div class="col-sm-5 col-md-6">
+                    <a href="../blog/blogname.html" class="btn btn-primary"
+                      >Read more</a
+                    >
+                  </div>
+                  <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                    <div class="icon">
+                      <i id="heartIcon" class="far fa-heart heart-icon"></i>
+                    <!-- Button to trigger modal -->
+                    <i class="fas fa-share-alt"onclick="openShareModal()"></i>
+                    <!-- The modal -->
+                    <div id="shareModal" class="modal">
+                      <div class="modal-content">
+                        <span class="close" onclick="closeShareModal()"
+                          >&times;</span
+                        >
+                        <!-- Share options -->
+                        <div class="form-share">
+                          <div>
+                            <h3 style="text-align: center; color: orange;">Share this blog</h3>
+                            <p style="text-align: center; margin: 35px 0 35px 0;">If you love this blog, share it with your friend.
+                              They will thank you later. ^-^</p>
+                          </div>  
+                          <div class="fb-gg-gt">
+                            <div class="facebook">
+                              <button onclick="share('facebook')" type="button" class="btn btn-primary"><i class="fab fa-facebook"></i> Facebook</button>
+                            </div>
+                            <div class="google">
+                              <button onclick="share('google')" type="button" style="color: #ffffff;" class="btn btn-info"><i class="fab fa-google" style="color: #ffffff;"></i> Google</button>
+                            </div>
+                            <div class="github">
+                              <button onclick="share('github')" type="button" class="btn btn-dark"><i class="fab fa-github"></i> Github</button>
+                            </div>
+                          </div>
+                          <h5 style="color: black; text-align: center; margin-top: 35px;">4,5K Share</h5>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box2"></div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 25rem">
+              <img
+                src="../img/dai-hoc-fpt-1-1659081213-910x607.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Blog’s title will goes here in bold and be set at size 18
+                </h5>
+                <p class="card-text">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum...”
+                </p>
+
+                <div class="row">
+                  <div class="col-sm-5 col-md-6">
+                    <a href="../blog/blogname.html" class="btn btn-primary"
+                      >Read more</a
+                    >
+                  </div>
+                  <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                    <div class="icon">
+                      <i id="heartIcon" class="far fa-heart heart-icon"></i>
+                    <!-- Button to trigger modal -->
+                    <i class="fas fa-share-alt"onclick="openShareModal()"></i>
+                    <!-- The modal -->
+                    <div id="shareModal" class="modal">
+                      <div class="modal-content">
+                        <span class="close" onclick="closeShareModal()"
+                          >&times;</span
+                        >
+                        <!-- Share options -->
+                        <div class="form-share">
+                          <div>
+                            <h3 style="text-align: center; color: orange;">Share this blog</h3>
+                            <p style="text-align: center; margin: 35px 0 35px 0;">If you love this blog, share it with your friend.
+                              They will thank you later. ^-^</p>
+                          </div>  
+                          <div class="fb-gg-gt">
+                            <div class="facebook">
+                              <button onclick="share('facebook')" type="button" class="btn btn-primary"><i class="fab fa-facebook"></i> Facebook</button>
+                            </div>
+                            <div class="google">
+                              <button onclick="share('google')" type="button" style="color: #ffffff;" class="btn btn-info"><i class="fab fa-google" style="color: #ffffff;"></i> Google</button>
+                            </div>
+                            <div class="github">
+                              <button onclick="share('github')" type="button" class="btn btn-dark"><i class="fab fa-github"></i> Github</button>
+                            </div>
+                          </div>
+                          <h5 style="color: black; text-align: center; margin-top: 35px;">4,5K Share</h5>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container-footer">
+        <div class="footer-column">
+          <h4>Progams</h4>
+          <span>Corporate</span>
+          <span>One to One</span>
+          <span>Consulting</span>
+        </div>
+        <div class="footer-column">
+          <h4>Service</h4>
+          <span>Training</span>
+          <span>Coaching</span>
+          <span>Consulting</span>
+        </div>
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <span>Home</span>
+          <span>About</span>
+          <span>Contact</span>
+        </div>
+        <div class="footer-column">
+          <h4>Newsletter</h4>
+          <div class="search">
+            <input type="text" placeholder="Your email" />
+            <button type="button" class="btn btn-warning">Search</button>
+          </div>
+        </div>
+      </div>
+      <div class="logo">
+        <span>Mobile: 0987.456.888</span>
+        <span>Email: fptaptech@gmail.com</span>
+        <div class="logo-container">
+          <img src="/img/421ff245172287441fea2e02dfb1e661.png" alt="" />
+          <img src="/img/Facebook-200x200.jpg" alt="" />
+          <img src="/img/Instagram-200x200.jpg" alt="" />
+          <img
+            src="/img/logo-twitter-inkythuatso-2-01-27-10-22-11.jpg"
+            alt=""
+          />
+          <img src="/img/logo-Youtube-PNG.png" alt="" />
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/main.js"></script>
+    <!-- <script>
+      var heartIcons = document.querySelectorAll(".heart-icon");
+      heartIcons.forEach(function (icon) {
+        icon.addEventListener("click", function () {
+          this.classList.toggle("far");
+          this.classList.toggle("fas");
+          this.style.color = this.classList.contains("fas")
+            ? "#ff0000"
+            : "#000";
+        });
+      });
+
+      // Open the modal
+      function openShareModal() {
+        document.getElementById("shareModal").style.display = "block";
+      }
+
+      // Close the modal
+      function closeShareModal() {
+        document.getElementById("shareModal").style.display = "none";
+      }
+
+      function share(platform) {
+    // Your share logic here
+    console.log("Sharing on " + platform);
+    alert('Sharing on ' + platform + ' successful!');
+    // Close the modal after sharing
+    closeShareModal();
+}
+    </script> -->
+  </body>
+</html>
