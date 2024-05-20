@@ -40,8 +40,7 @@ header.navbar {
 
 .container{
     margin-top: 180px;
-    width: 80%;
-    height: 600px;
+    height: 500px;
     background-color: #fdfdfd;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);

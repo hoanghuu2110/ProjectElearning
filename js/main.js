@@ -62,6 +62,18 @@ if (element) {
       }
     });
 }
+// studenttest check time
+document.querySelectorAll('.form-check-input').forEach(input => {
+  input.addEventListener('change', function() {
+    const question = this.getAttribute('data-question');
+    const icon = document.querySelector(`.fa-check-circle[data-question="${question}"]`);
+    if (icon) {
+      icon.classList.remove('far');
+      icon.classList.add('fas');
+      icon.style.color = '#ffa200';
+    }
+  });
+});
 
 // upcomingcourses // currentcourses
 function redirectToSelectedPage(selectElement) {
@@ -134,3 +146,7 @@ function showSuccessMessage() {
   // Hiển thị thông báo thành công
   alert("Saved successfully!");
 }
+
+
+
+

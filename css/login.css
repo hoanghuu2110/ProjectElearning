@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-
+@media (min-width: 768px) {
+    .container, .container-md,.container-sm {
+        max-width: 720px;
+        height: 550px;
+    }
+}
 .text-primary {
     color: #71c35e !important;
 }
@@ -224,7 +229,7 @@
 }
 
 .logo-home{
-    padding: 50px;
+    padding: 30px 0 0 30px;
     font-size: 35px;
 }
 .fa-home{
